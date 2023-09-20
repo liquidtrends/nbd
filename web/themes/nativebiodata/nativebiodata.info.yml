@@ -1,0 +1,22 @@
+name: nativebiodata
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - nativebiodata/base
+  - nativebiodata/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - nativebiodata/user
+  core/drupal.dropbutton:
+    - nativebiodata/dropbutton
+  core/drupal.dialog:
+    - nativebiodata/dialog
+  file/drupal.file:
+    - nativebiodata/file
+  core/drupal.progress:
+    - nativebiodata/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.1.1'
