@@ -393,11 +393,7 @@ class CKEditor5 extends EditorBase implements ContainerFactoryPluginInterface {
     $form['plugin_settings'] = [
       '#type' => 'vertical_tabs',
       '#title' => $this->t('CKEditor 5 plugin settings'),
-      // Add an ID to the editor settings vertical tabs wrapper so it can be
-      // easily targeted by JavaScript.
-      '#wrapper_attributes' => [
-        'id' => 'plugin-settings-wrapper',
-      ],
+      '#id' => 'ckeditor5-plugin-settings',
     ];
 
     $this->injectPluginSettingsForm($form, $form_state, $editor);
@@ -687,7 +683,7 @@ class CKEditor5 extends EditorBase implements ContainerFactoryPluginInterface {
 
       // Special case: AJAX updates that do not submit the form (that cannot
       // result in configuration being saved).
-      if (in_array('editor_form_filter_admin_format_editor_configure', $form_state->getSubmitHandlers(), TRUE)) {
+      if ($form_state->getSubmitHandlers() === ['editor_form_filter_admin_format_editor_configure']) {
         // Ensure that plugins' validation constraints do not immediately
         // trigger a validation error: the user may choose to configure other
         // CKEditor 5 aspects first.
@@ -859,6 +855,7 @@ class CKEditor5 extends EditorBase implements ContainerFactoryPluginInterface {
     $paired_editor->enforceIsNew(TRUE);
     $reflector = new \ReflectionObject($paired_editor);
     $property = $reflector->getProperty('filterFormat');
+    $property->setAccessible(TRUE);
     $property->setValue($paired_editor, clone $filter_format);
     return $paired_editor;
   }
