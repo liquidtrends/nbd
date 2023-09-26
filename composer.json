@@ -13,6 +13,9 @@
         "platform-check": false,
         "platform": {
             "php": "7.4.0"
+        },
+        "allow-plugins": {
+            "cweagans/composer-patches": true
         }
     },
     "repositories": [
@@ -23,6 +26,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/better_social_sharing_buttons": "^4.0",
         "drupal/bg_image_formatter": "^1.16",
         "drupal/block_classes": "^1.0",
@@ -108,6 +112,15 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
-        }
+        },
+		 "enable-patching": true,
+		 "patches": {
+		    "drupal/filter": {
+                "fix the issue with image lazy load filter: module from drupal 10": "patches/core_filter_lazy_image_load_fix.patch"
+            },
+            "drupal/views": {
+                "fix the issue with responsive grid in views: module from Drupal 10": "patches/core_views_grid_responsive_fix.patch"
+            }
+		 }
     }
 }
