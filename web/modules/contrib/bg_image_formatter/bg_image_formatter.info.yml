@@ -5,7 +5,7 @@ type: module
 dependencies:
   - drupal:image
 
-# Information added by Drupal.org packaging script on 2022-11-09
-version: '8.x-1.16'
+# Information added by Drupal.org packaging script on 2023-10-29
+version: '8.x-1.17'
 project: 'bg_image_formatter'
-datestamp: 1668029841
+datestamp: 1698617246

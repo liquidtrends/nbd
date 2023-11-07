@@ -102,3 +102,85 @@ abbr.ajax-changed {
   background: url(../../images/icons/error.svg) no-repeat;
   background-size: contain;
 }
+
+.views-exposed-form .bef-datepicker, .views-exposed-form input {
+  width: 100px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  height: 38px;
+  margin-top: 0;
+  padding-left: 9px;
+}
+.views-exposed-form input {
+  width: auto;
+}
+.views-exposed-form #edit-keys, .views-exposed-form #edit-field-tags-target-id {
+  width: 250px;
+  background-position: 98%;
+}
+.bef-exposed-form .form--inline > .form-item {
+  float: none;
+}
+.views-exposed-form #edit-created-wrapper {
+
+}
+.views-exposed-form .form-item-created-min label, .views-exposed-form .form-item-created-max label {
+  display: inline-block;
+  min-width: 85px;
+}
+.views-exposed-form .form-item-type select {
+  width: 250px;
+}
+.views-exposed-form {
+  text-align: center;
+}
+.views-exposed-form > .form--inline {
+  padding-bottom: 40px;
+  display: inline-block;
+}
+
+@media (min-width: 992px) {
+  .views-exposed-form {
+    text-align: left;
+  }
+  .views-exposed-form > .form--inline {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .views-exposed-form .form-item-type {
+    flex: 1;
+    flex-basis: 33%;
+  }
+  .views-exposed-form #edit-created-wrapper {
+    flex: 1;
+    flex-basis: 66%;
+  }
+  .views-exposed-form #edit-created-wrapper {
+    flex: 1;
+    flex-basis: 66%;
+  }
+  .views-exposed-form #edit-created-wrapper legend {
+    display: none;
+  }
+
+  .bef-exposed-form .form--inline .form-item {
+    float: left;
+  }
+  .bef-exposed-form .form--inline  .form-item-created-min, .bef-exposed-form .form--inline  .form-item-created-max {
+    margin-top: 0;
+    float: left;
+  }
+  .bef-exposed-form .form--inline  .form-item-created-min {
+    margin-right: 30px;
+  }
+  .bef-exposed-form .form--inline  .form-item-created-min label {
+    width: 100px;
+  }
+  .bef-exposed-form .form--inline .form-item-keys {
+    flex-basis: 33%;
+  }
+  .bef-exposed-form .form--inline .form-item-field-tags-target-id {
+    margin-right: 30px;
+  }
+}

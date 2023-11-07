@@ -1,6 +1,6 @@
-  
+
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
-  
+
   body {
     font-family: 'Inter', sans-serif !important;
   }
@@ -43,7 +43,7 @@
 
   .nav-container li.menu-item {
     display: inline-block;
-    margin-right: 20px; 
+    margin-right: 20px;
   }
 
   .nav-container a {
@@ -52,7 +52,7 @@
     text-decoration: none;
     color: #000!important
   }
-  
+
 
   .nav-container a:hover {
     font-weight: bold;
@@ -89,7 +89,7 @@
     text-decoration: none;
     color: #fff!important
   }
-  
+
 .view-id-home_page_banner {
     height:400px;
 }
@@ -163,6 +163,11 @@ img {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 767px) {
+  .field-content.stories-image {
+    display: block;
+  }
 }
 
 /* Set the square dimensions for the images */

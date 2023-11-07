@@ -2,6 +2,8 @@ base:
   version: VERSION
   css:
     component:
+      css/components/slick.css:
+        weight: -10
       css/components/styles.css:
         weight: -10
       css/components/action-links.css:
@@ -48,6 +50,11 @@ base:
         weight: -10
       css/components/ui-dialog.css:
         weight: -10
+  js:
+    js/slick.min.js:
+      weight: -10
+    js/script.js:
+      weight: -10
 dialog:
   version: VERSION
   css:
